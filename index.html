@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="author" content="olive blanchard">
+    </head>
+    <body>
+        <p id="p1">What's 1+1?</p>
+        <button onclick="rightAnswer(), redirect()">Two</button>
+        <button onclick="wrongAnswer()">Not two</button>
+        <script>
+            /*Ignore
+                |
+                |
+                v  */
+            const sleep = (milliseconds) => {
+                return new Promise(resolve => setTimeout(resolve, milliseconds))
+            }
+
+            function rightAnswer() {
+                document.getElementById('p1').innerHTML = "Correct!";
+            }
+            function wrongAnswer() {
+                document.getElementById("p1").innerHTML = "<h1>WRONG! YOU LOSE!</h1>"
+            }
+            function redirect() {
+                window.location.href = "question 2.htm"
+            }
+        </script>
+    </body>
+</html>
