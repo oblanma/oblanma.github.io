@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="author" content="olive blanchard">
+    </head>
+    <body>
+        <p id="p1">What's the square rood of 8.737</p>
+        <button onclick="rightAnswer()">2.955841674</button>
+        <button onclick="wrongAnswer()">2.953841324</button>
+        <script>
+            const sleep = (milliseconds) => {
+                return new Promise(resolve => setTimeout(resolve, milliseconds))
+            }
+
+            function rightAnswer() {
+                document.getElementById('p1').innerHTML = "Correct!";
+                window.location.href = "question 3.htm"
+            }
+            function wrongAnswer() {
+                document.getElementById("p1").innerHTML = "<h1>WRONG! YOU LOSE!</h1>"
+                window.location.href = "main.htm"
+            }
+        </script>
+    </body>
+</html>

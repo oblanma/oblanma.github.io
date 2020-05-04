@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="author" content="olive blanchard">
+    </head>
+    <body>
+        <p id="p1">minecraft?</p>
+        <button onclick="rightAnswer()">MINECRAFT!!!!!!!!!</button>
+        <button onclick="wrongAnswer()">shut up</button>
+        <script>
+            const sleep = (milliseconds) => {
+                return new Promise(resolve => setTimeout(resolve, milliseconds))
+            }
+
+            function rightAnswer() {
+                document.getElementById('p1').innerHTML = "You won! Have some Timberlake brand boots! <br> <img src='t i m b s.jpg' alt='timberlake boots'>";
+            }
+            function wrongAnswer() {
+                document.getElementById("p1").innerHTML = "<h1>WRONG! YOU LOSE!</h1>"
+                window.location.href = "main.htm"
+            }
+        </script>
+    </body>
+</html>

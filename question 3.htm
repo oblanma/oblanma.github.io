@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="author" content="olive blanchard">
+    </head>
+    <body>
+        <p id="p1">When did you last poop</p>
+        <button onclick="rightAnswer()">This isn't an objective question</button>
+        <button onclick="wrongAnswer()">Second answer</button>
+        <script>
+            const sleep = (milliseconds) => {
+                return new Promise(resolve => setTimeout(resolve, milliseconds))
+            }
+
+            function rightAnswer() {
+                document.getElementById('p1').innerHTML = "Correct!";
+                window.location.href = "question 4.htm"
+            }
+            function wrongAnswer() {
+                document.getElementById("p1").innerHTML = "<h1>WRONG! YOU LOSE!</h1>"
+                window.location.href = "main.htm"
+            }
+        </script>
+    </body>
+</html>
